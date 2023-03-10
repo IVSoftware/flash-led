@@ -14,7 +14,7 @@ Here, in general form, is one way to go about updating a UI element (e.g. to cha
         private void onClickFlash(object sender, EventArgs e)
         {
             _ = ChangeCalled();
-        }
+        }        
 
         private async Task ChangeCalled()
         {
@@ -23,12 +23,12 @@ Here, in general form, is one way to go about updating a UI element (e.g. to cha
                 Color.LightGreen,
                 Color.CornflowerBlue,
                 Color.Goldenrod,
-                Color.DimGray,
             })
             {
                 led1.BackColor= color;
                 await Task.Delay(TimeSpan.FromSeconds(1));
             }
+            led1.BackColor = Color.DimGray;
         }
     }
 
@@ -62,7 +62,7 @@ Where:
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            using (var pen = new Pen(Color.Black, 2)) 
+            using (var pen = new Pen(Color.White, 2)) 
             {
                 e.Graphics.DrawEllipse(
                     pen,
@@ -74,4 +74,4 @@ Where:
     }
 
 
-  [1]: https://i.stack.imgur.com/dRZ04.png
+  [1]: https://i.stack.imgur.com/Lebke.png
